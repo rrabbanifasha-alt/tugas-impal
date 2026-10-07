@@ -31,8 +31,11 @@ Dokumen spesifikasi kebutuhan perangkat lunak ini merangkum kebutuhan fungsional
 
 | No. | Quality Criteria | Kode Kebutuhan | Deskripsi |
 | :-: | :--- | :---: | :--- |
-| **1.** | **Usability** | **NFR-USB-01** | Sistem harus mudah digunakan oleh konsumen rumah tangga tanpa panduan manual khusus, diukur berdasarkan perolehan skor kuesioner *System Usability Scale* (SUS) minimal 75 (*Good*). |
-| **2.** | **Performance** | **NFR-PRF-01** | Waktu respon aplikasi tidak boleh lebih dari 2,5 detik untuk memuat katalog produk pada koneksi $\ge$ 10 Mbps, dan eksekusi penyimpanan transaksi ke database maksimal 1,0 detik. |
-| **3.** | **Security** | **NFR-SEC-01** | Seluruh data transaksi ditransmisikan menggunakan protokol aman HTTPS (TLS 1.2 / 1.3). Sistem menolak berkas unggahan bukti ulasan selain format citra (.jpg, .jpeg, .png, .webp) atau yang melebihi ukuran 5 MB. |
-| **4.** | **Portability** | **NFR-POR-01** | Antarmuka web harus responsif dan mempertahankan struktur tata letak yang proporsional tanpa kerusakan visual pada rentang resolusi layar dari 360 piksel (*mobile*) hingga 1920 piksel (*desktop*). |
-| **5.** | **Reliability** | **NFR-REL-01** | Sistem menjamin integritas transaksi pemesanan relasional antara tabel pengguna, pesanan, dan rincian item belanja menggunakan transaksi Prisma ORM agar terhindar dari inkonsistensi data. |
+| **1.** | **Usability** | **NFR-USB-01** | Skor SUS minimal 75 dari minimal 20 responden, dan $\ge$ 90% responden dapat menyelesaikan pemesanan tanpa bantuan dalam $\le$ 3 menit. |
+| **2.** | **Performance** | **NFR-PRF-01** | Halaman katalog termuat penuh (*Largest Contentful Paint*) $\le$ 2,5 detik pada koneksi $\ge$ 10 Mbps; penyimpanan pesanan $\le$ 1,0 detik, diuji hingga 50 pengguna bersamaan. |
+| **3.** | **Security** | **NFR-SEC-01** | Seluruh komunikasi klien–server menggunakan HTTPS (TLS 1.2/1.3). |
+| **4.** | **Security** | **NFR-SEC-02** | Sistem menolak 100% unggahan berformat selain `.jpg`/`.jpeg`/`.png`/`.webp` atau berukuran > 5 MB, baik di sisi klien maupun server. |
+| **5.** | **Security** | **NFR-SEC-03** | Akses ke halaman dan API admin hanya dapat dilakukan setelah autentikasi; permintaan tanpa kredensial ditolak dengan status 401. |
+| **6.** | **Reliability** | **NFR-REL-01** | Penyimpanan pesanan bersifat atomik: bila ada langkah yang gagal, tidak ada data pesanan parsial tersimpan (diuji pada 50 percobaan gagal, 0 data yatim). |
+| **7.** | **Availability** | **NFR-AVL-01** | Sistem tersedia minimal 99% per bulan pada jam operasional. |
+
