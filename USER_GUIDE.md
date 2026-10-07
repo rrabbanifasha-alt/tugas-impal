@@ -1,6 +1,6 @@
 # Panduan Pengguna — Sayur Ikat
 
-Panduan ini disusun berdasarkan screenshot aplikasi web **Sayur Ikat** (belanja sayur organik & bebas plastik untuk area Gading Serpong & Tangerang).
+Panduan ini disusun berdasarkan screenshot aplikasi web **Sayur Ikat** (belanja sayur organik & bebas plastik untuk area Bandung Raya).
 
 Semua gambar ada di folder [`screenshots/`](./screenshots/).
 
@@ -26,7 +26,7 @@ Semua gambar ada di folder [`screenshots/`](./screenshots/).
 | Admin | `/admin/products` | Kelola katalog & stok |
 | Admin | `/admin/feedback` | Baca masukan pelanggan & follow-up WA |
 
-**Catatan layanan:** pengiriman khusus **Gading Serpong & Tangerang**; pesan sebelum jam **12.00** untuk pengiriman harian.
+**Catatan layanan:** pengiriman khusus **Bandung Raya**; pesan sebelum jam **12.00** untuk pengiriman harian.
 
 ---
 
@@ -74,7 +74,7 @@ Semua gambar ada di folder [`screenshots/`](./screenshots/).
 2. Isi data pengiriman (wajib):
    - Nama lengkap
    - Nomor WhatsApp
-   - Alamat lengkap (Tangerang / Serpong)
+   - Alamat lengkap (Kota Bandung / Cimahi / Bandung Raya)
 3. Isi catatan pesanan (opsional).
 4. Cek subtotal + ongkir, lalu lanjut checkout.
 5. Aplikasi membuka **WhatsApp** dengan pesan pesanan siap kirim ke admin.

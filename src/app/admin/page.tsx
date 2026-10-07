@@ -239,7 +239,7 @@ export default function AdminOverviewPage() {
             <div className="bg-[#1C3F29] text-[#FAF7F2] p-6 rounded-3xl shadow-sm space-y-4">
               <h3 className="font-serif text-lg font-bold">Aksi Cepat Admin</h3>
               <p className="text-xs text-[#A8BBA5]">
-                Kelola pasokan sayur atau pantau status kirim kurir di area Gading Serpong & Tangerang.
+                Kelola pasokan sayur atau pantau status kirim kurir di area Kota Bandung & Cimahi.
               </p>
               <div className="space-y-2 pt-2">
                 <Link
@@ -263,10 +263,10 @@ export default function AdminOverviewPage() {
             <div className="bg-[#FFFDF9] p-5 rounded-3xl border border-[#E5DEC9] space-y-3">
               <div className="flex items-center gap-2">
                 <span className="text-lg">🚜</span>
-                <h4 className="font-serif text-sm font-bold text-[#1C3F29]">Mitra Petani Tangerang</h4>
+                <h4 className="font-serif text-sm font-bold text-[#1C3F29]">Mitra Petani Bandung & Lembang</h4>
               </div>
               <p className="text-xs text-[#5E6D5B] leading-relaxed">
-                Panen subuh dari Cisauk, Legok, dan Curug telah diterima di Hub Gading Serpong.
+                Panen subuh dari Lembang, Parongpong, dan Ciwidey telah diterima di Hub Bandung.
               </p>
               <div className="text-[11px] font-bold text-[#2D5A27] bg-[#E8F0E5] px-3 py-1.5 rounded-xl">
                 ✓ Besek Bambu Siap Digunakan

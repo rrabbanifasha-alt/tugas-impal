@@ -30,7 +30,7 @@ async function getProducts(): Promise<Product[]> {
           category: p.category,
           stock: p.stock,
           imageUrl: p.imageUrl || initialMatch?.imageUrl || '/images/kangkung.jpg',
-          farmerOrigin: initialMatch?.farmerOrigin || '👨‍🌾 Kelompok Tani Organik Tangerang',
+          farmerOrigin: initialMatch?.farmerOrigin || '👨‍🌾 Kelompok Tani Organik Bandung',
           badgeLabel: initialMatch?.badgeLabel || (p.category.includes('Paket') ? '100% Bebas Plastik' : 'Panen Subuh'),
           badgeColor: initialMatch?.badgeColor || 'green',
           packageItems: initialMatch?.packageItems || (p.category.includes('Paket') ? ['Sayur Utama', 'Bumbu Racik', 'Pelengkap'] : undefined),

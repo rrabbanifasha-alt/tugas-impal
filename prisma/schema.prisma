@@ -13,7 +13,7 @@ model User {
   id        String   @id @default(cuid())
   name      String
   whatsapp  String
-  address   String   // Fokus ke area Tangerang / Gading Serpong
+  address   String   // Fokus ke area Kota Bandung / Bandung Raya
   latitude  Float?   // Titik Koordinat (opsional)
   longitude Float?   // Titik Koordinat (opsional)
   createdAt DateTime @default(now())

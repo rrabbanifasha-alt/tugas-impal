@@ -74,7 +74,7 @@ Sistem Sayur Ikat dirancang untuk melayani **2 (dua) aktor utama**:
 ## 5. Batasan Sistem (*System Scope & Constraints*)
 
 1. **Cakupan Wilayah Operasional**:  
-   Pengiriman produk dibatasi secara ketat hanya melayani area **Tangerang dan Gading Serpong** (Banten).
+   Pengiriman produk dibatasi secara ketat hanya melayani area **Kota Bandung, Kota Cimahi, dan sekitarnya (Bandung Raya, Jawa Barat)**.
 2. **Ketentuan Jam Pemesanan (*Cut-off Time*)**:  
    Pemesanan yang masuk sebelum pukul **12.00 WIB** akan dikirim pada hari yang sama (*same-day delivery*). Pesanan setelah pukul 12.00 WIB dijadwalkan pada hari pengantaran berikutnya.
 3. **Mekanisme Pembayaran**:  

@@ -33,7 +33,7 @@ Berikut adalah modul, fitur, dan kapabilitas yang menjadi tanggung jawab aplikas
    * Perhitungan otomatis subtotal belanja dan biaya pengiriman flat (dengan logika gratis ongkir sesuai ketentuan).
    * Penyimpanan sementara keranjang di *local storage* peramban pengguna agar tidak hilang saat halaman diperbarui (*page refresh*).
 3. **Pemesanan Terpadu & Checkout WhatsApp (*WhatsApp-Assisted Checkout*)**:
-   * Formulir data pengiriman: Nama lengkap, Nomor WhatsApp aktif, Alamat pengiriman lengkap (khusus Tangerang & Gading Serpong), serta Catatan pesanan khusus.
+   * Formulir data pengiriman: Nama lengkap, Nomor WhatsApp aktif, Alamat pengiriman lengkap (khusus wilayah Bandung Raya), serta Catatan pesanan khusus.
    * Penyimpanan data transaksi ke database server (tabel `Order` dan `OrderItem`) dan pembentukan kode unik pesanan.
    * Pembuatan format pesan pemesanan terstruktur otomatis dan pengalihan (*deep-link redirect*) ke WhatsApp resmi admin toko (`wa.me`).
 4. **Formulir Evaluasi Kualitas & Jaminan Garansi (*Feedback & Quality Control*)**:

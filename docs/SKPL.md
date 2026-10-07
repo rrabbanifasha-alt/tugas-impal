@@ -64,7 +64,7 @@ Lingkup sistem mencakup:
 
 Sistem tidak mencakup:
 - Integrasi otomatis payment gateway pihak ketiga (menggunakan konfirmasi pembayaran manual via WA / transfer bank / COD).
-- Pelacakan GPS kurir secara *real-time* berbasis peta (lokasi pengiriman berbasis alamat teks dan wilayah layanan Tangerang & Gading Serpong).
+- Pelacakan GPS kurir secara *real-time* berbasis peta (lokasi pengiriman berbasis alamat teks dan wilayah layanan Bandung Raya).
 
 ### 1.3 Definisi, Singkatan, dan Akronim
 - **SKPL**: Spesifikasi Kebutuhan Perangkat Lunak (padanan bahasa Indonesia untuk *Software Requirements Specification* - SRS).
@@ -129,11 +129,11 @@ Pengguna sistem Sayur Ikat terbagi ke dalam 2 aktor utama:
 
 | Aktor | Deskripsi Peran | Hak Akses | Tingkat Keterampilan Komputer |
 | :--- | :--- | :--- | :--- |
-| **Pelanggan (Customer)** | Konsumen rumah tangga di area Gading Serpong & Tangerang yang ingin membeli sayuran organik. | Mengakses katalog (`/`), mengelola keranjang, mengirim pesanan, mengirim form feedback (`/feedback`). | Pemula / Pengguna ponsel cerdas umum. |
+| **Pelanggan (Customer)** | Konsumen rumah tangga di area Bandung Raya yang ingin membeli sayuran organik. | Mengakses katalog (`/`), mengelola keranjang, mengirim pesanan, mengirim form feedback (`/feedback`). | Pemula / Pengguna ponsel cerdas umum. |
 | **Pengelola Toko (Admin)** | Pengelola dapur, kurir, dan layanan pelanggan Sayur Ikat. | Mengakses seluruh fitur manajemen di portal admin (`/admin`, `/admin/orders`, `/admin/products`, `/admin/feedback`). | Menengah / Terbiasa menggunakan web browser. |
 
 ### 2.4 Batasan Sistem
-1. **Area Operasional**: Pengiriman hanya mencakup area Tangerang dan Gading Serpong, Banten.
+1. **Area Operasional**: Pengiriman hanya mencakup area Kota Bandung, Cimahi, dan wilayah Bandung Raya, Jawa Barat.
 2. **Jadwal Pemesanan**: Pesanan sebelum pukul 12.00 WIB dikirim pada hari berjalan; setelah pukul 12.00 WIB berpotensi dijadwalkan pada hari pengantaran berikutnya.
 3. **Penyimpanan Gambar**: Bukti foto feedback disimpan secara terenkode *Base64 string* atau URL gambar publik, dengan batasan ukuran file maksimal 5 MB.
 4. **Basis Data**: Menggunakan SQLite yang terhubung melalui Prisma ORM untuk menjamin portabilitas dan kecepatan *development/deployment*.
@@ -215,7 +215,7 @@ usecaseDiagram
 | **SKPL-F-03** | Manajemen Keranjang Belanja | Sistem harus memungkinkan pelanggan menambahkan produk ke keranjang, menambah/mengurangi kuantitas, menghapus item, serta mengosongkan keranjang. | **Tinggi (Must Have)** |
 | **SKPL-F-04** | Persistensi Keranjang Lokal | Sistem harus menyimpan isi keranjang ke dalam penyimpanan lokal peramban (*LocalStorage*) sehingga data tidak hilang saat tab ditutup atau dimuat ulang. | **Sedang (Should Have)** |
 | **SKPL-F-05** | Perhitungan Biaya Otomatis | Sistem harus menghitung subtotal belanja secara otomatis dan menetapkan ongkos kirim: Gratis Ongkir jika subtotal $\ge$ Rp 50.000; atau dikenakan biaya flat Rp 10.000 jika subtotal $<$ Rp 50.000. | **Tinggi (Must Have)** |
-| **SKPL-F-06** | Formulir Pengiriman & Pembayaran | Sistem harus menyediakan formulir *checkout* di dalam drawer yang memvalidasi input nama pelanggan, nomor WhatsApp valid, alamat lengkap di wilayah Tangerang/Serpong, catatan khusus, serta pilihan metode pembayaran (COD, QRIS, Transfer BCA, Transfer Mandiri). | **Tinggi (Must Have)** |
+| **SKPL-F-06** | Formulir Pengiriman & Pembayaran | Sistem harus menyediakan formulir *checkout* di dalam drawer yang memvalidasi input nama pelanggan, nomor WhatsApp valid, alamat lengkap di wilayah Bandung Raya, catatan khusus, serta pilihan metode pembayaran (COD, QRIS, Transfer BCA, Transfer Mandiri). | **Tinggi (Must Have)** |
 | **SKPL-F-07** | Pencatatan Pesanan ke Server | Sistem harus menyimpan pesanan yang divalidasi ke tabel `orders` dan `order_items` di database dengan status awal `PENDING` melalui endpoint `POST /api/orders`. | **Tinggi (Must Have)** |
 | **SKPL-F-08** | Integrasi Deep Link WhatsApp | Sistem harus mengonversi rincian pesanan yang tersimpan menjadi teks format rapi berstruktur (*order header*, ID pesanan, daftar item, total biaya, identitas & alamat) dan membuka tautan *wa.me* ke nomor WhatsApp Admin resmi Sayur Ikat. | **Tinggi (Must Have)** |
 | **SKPL-F-09** | Formulir Feedback Kualitas | Sistem harus menyediakan halaman khusus (`/feedback`) bagi pelanggan untuk mengevaluasi 4 pilar operasional: Kesegaran Sayur, Kualitas Bungkusan Daun/Besek, Ketepatan Waktu Pengiriman, dan Pengalaman Aplikasi/WA. | **Tinggi (Must Have)** |

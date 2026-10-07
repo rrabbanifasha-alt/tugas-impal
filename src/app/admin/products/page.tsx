@@ -57,7 +57,7 @@ export default function AdminProductsPage() {
     setEditingProduct(null);
     setFormData({
       name: '',
-      description: 'Sayur segar organik dipanen subuh dari petani Tangerang.',
+      description: 'Sayur segar organik dipanen subuh dari petani Lembang & Bandung.',
       price: '',
       category: 'Paket',
       stock: '25',

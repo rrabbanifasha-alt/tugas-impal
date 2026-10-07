@@ -80,7 +80,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   const subtotal = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   
-  // Free delivery for orders >= 50.000 IDR in Tangerang / Gading Serpong
+  // Free delivery for orders >= 50.000 IDR in Bandung Raya
   const deliveryFee = subtotal >= 50000 || subtotal === 0 ? 0 : 10000;
 
   return (

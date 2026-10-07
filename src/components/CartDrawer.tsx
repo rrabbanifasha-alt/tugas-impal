@@ -248,7 +248,7 @@ export default function CartDrawer() {
                       <span>📍</span> Data Alamat Pengiriman
                     </h3>
                     <span className="text-[10px] bg-[#FAF7F2] text-[#2D5A27] px-2 py-0.5 rounded-full border border-[#D7E6D3]">
-                      Tangerang / Serpong
+                      Bandung Raya
                     </span>
                   </div>
 
@@ -290,7 +290,7 @@ export default function CartDrawer() {
                         rows={2}
                         value={formData.address}
                         onChange={handleInputChange}
-                        placeholder="Ruko/Cluster/Jalan, Kelurahan, Kecamatan, Gading Serpong / Tangerang"
+                        placeholder="Nama Jalan/Perumahan/Nomor Rumah, Kelurahan, Kecamatan, Kota Bandung/Cimahi"
                         className={`w-full px-3 py-2 text-xs bg-[#FAF7F2] border ${
                           formErrors.address ? 'border-red-500' : 'border-[#E5DEC9]'
                         } rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2D5A27] text-[#1C3F29]`}
@@ -534,7 +534,7 @@ export default function CartDrawer() {
                   <span className="font-bold text-[#1C3F29]">Rp {subtotal.toLocaleString('id-ID')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Biaya Pengiriman (Tangerang/Serpong):</span>
+                  <span>Biaya Pengiriman (Bandung Raya):</span>
                   <span className="font-bold text-[#2D5A27]">
                     {deliveryFee === 0 ? '🎉 GRATIS' : `Rp ${deliveryFee.toLocaleString('id-ID')}`}
                   </span>

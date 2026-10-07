@@ -120,7 +120,7 @@ Sesuai dokumen acuan KITANI, struktur bab tersusun atas:
   * Respons Sistem
   * Keamanan Data
   * Manajemen Pembayaran
-  * Wilayah Pengiriman (khusus Tangerang & Gading Serpong)
+  * Wilayah Pengiriman (khusus Bandung Raya)
 * **2.6 Asumsi dan Dependensi**:
   * **A. Asumsi** (Daftar bernomor angka 1..N mengenai kondisi ideal pengguna, data, dan lingkungan)
   * **B. Dependensi** (Daftar bernomor angka 1..N mengenai ketergantungan pihak ketiga: Hosting, Database, WhatsApp URI API, Jaringan Seluler)

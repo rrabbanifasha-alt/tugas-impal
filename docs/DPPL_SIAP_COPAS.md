@@ -11,7 +11,7 @@
 | :--- | :--- |
 | **Nomor Dokumen** | DPPL-SI-2026-V1.0 |
 | **Nama Proyek** | Sayur Ikat Web Application |
-| **Instansi / Usaha** | Sayur Ikat (Area Tangerang & Gading Serpong) |
+| **Instansi / Usaha** | Sayur Ikat (Area Bandung Raya) |
 | **Tanggal Pembuatan** | 6 Oktober 2026 |
 | **Status Dokumen** | Final / Disetujui |
 | **Standar Acuan** | IEEE Std 1016-2009 (*Software Design Descriptions*) |
@@ -226,7 +226,7 @@ Sistem Sayur Ikat menerapkan pola arsitektur **Three-Tier Architecture** yang di
 | `id` | VARCHAR(30) | NOT NULL | `cuid()` | Kunci primer identitas pelanggan unik. |
 | `name` | VARCHAR(100)| NOT NULL | - | Nama lengkap penerima pesanan. |
 | `whatsapp` | VARCHAR(20) | NOT NULL | - | Nomor WhatsApp aktif (kunci pencarian riwayat). |
-| `address` | TEXT | NOT NULL | - | Alamat rumah pengantaran (Tangerang/Serpong). |
+| `address` | TEXT | NOT NULL | - | Alamat rumah pengantaran (Bandung Raya). |
 | `latitude` | FLOAT | NULL | NULL | Koordinat lintang lokasi pelanggan (opsional). |
 | `longitude`| FLOAT | NULL | NULL | Koordinat bujur lokasi pelanggan (opsional). |
 | `createdAt`| DATETIME | NOT NULL | `now()` | Waktu pembuatan akun/profil pertama kali. |
@@ -322,7 +322,7 @@ Sistem Sayur Ikat menerapkan pola arsitektur **Three-Tier Architecture** yang di
 [ ROOT: https://sayurikat.com ]
   │
   ├──► [ / ] Halaman Beranda (Storefront)
-  │      ├── Header & Pengumuman Operasional (Area Tangerang & Serpong)
+  │      ├── Header & Pengumuman Operasional (Area Bandung Raya)
   │      ├── Editorial Hero Section (Filosofi Bebas Plastik & Besek Bambu)
   │      ├── Katalog Produk dengan Filter Kategori (Paket / Satuan / Bumbu)
   │      └── [ DRAWER ] Keranjang Belanja & Form WhatsApp Checkout
@@ -374,7 +374,7 @@ Sistem Sayur Ikat menerapkan pola arsitektur **Three-Tier Architecture** yang di
   "customer": {
     "name": "Ibu Ratna Dewi",
     "whatsapp": "081298765432",
-    "address": "Perumahan BSD City Sektor 1.2 Blok C No. 5, Tangerang Selatan",
+    "address": "Jl. Ir. H. Juanda (Dago) No. 120, Coblong, Kota Bandung",
     "notes": "Tolong diikat di gagang pintu pagar jika belum ada orang."
   },
   "items": [
@@ -527,7 +527,7 @@ Perancangan format invoice pesan otomatis diimplementasikan pada berkas `src/lib
 3. Buat perulangan baris untuk setiap item: `• {JUMLAH}x {NAMA_PRODUK} (Rp {SUBTOTAL_ITEM})`.
 4. Tambahkan label metode pembayaran yang dipilih (COD / QRIS / Transfer Bank).
 5. Tambahkan rincian subtotal, biaya kirim (GRATIS jika $\ge$ Rp 50.000 atau Rp 10.000), dan total pembayaran akhir.
-6. Cantumkan rincian nama pembeli, nomor telepon pembeli, alamat lengkap wilayah Tangerang/Serpong, dan catatan khusus pengantaran.
+6. Cantumkan rincian nama pembeli, nomor telepon pembeli, alamat lengkap wilayah Bandung Raya, dan catatan khusus pengantaran.
 7. Lakukan transformasi karakter melalui fungsi `encodeURIComponent(teksPesan)`.
 8. Gabungkan ke URL tujuan: `https://wa.me/6281111090906?text={pesanTerenkode}`.
 

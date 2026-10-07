@@ -5,21 +5,21 @@ import { CartProvider } from '@/context/CartContext';
 export const metadata: Metadata = {
   title: 'Sayur Ikat | Sayur Premium 100% Bebas Plastik',
   description:
-    'Pesan sayur segar langsung dari petani lokal Tangerang. Dikemas higienis dengan besek bambu dan daun pisang. Bebas sampah plastik!',
+    'Pesan sayur segar langsung dari petani lokal Lembang & Bandung. Dikemas higienis dengan besek bambu dan daun pisang. Bebas sampah plastik!',
   keywords: [
     'sayur organik',
     'sayur bebas plastik',
     'sayur ikat',
-    'sayur segar tangerang',
-    'gading serpong sayur',
-    'e-grocery organik',
+    'sayur segar bandung',
+    'sayur lembang ciwidey',
+    'e-grocery organik bandung',
   ],
   authors: [{ name: 'Sayur Ikat Indonesia' }],
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
   openGraph: {
     title: 'Sayur Ikat | Sayur Premium 100% Bebas Plastik',
     description:
-      'Pesan sayur segar langsung dari petani lokal Tangerang. Dikemas higienis dengan besek bambu dan daun pisang. Bebas sampah plastik!',
+      'Pesan sayur segar langsung dari petani lokal Lembang & Bandung. Dikemas higienis dengan besek bambu dan daun pisang. Bebas sampah plastik!',
     url: '/',
     siteName: 'Sayur Ikat',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sayur Ikat | Sayur Premium 100% Bebas Plastik',
     description:
-      'Pesan sayur segar langsung dari petani lokal Tangerang. Dikemas higienis dengan besek bambu dan daun pisang. Bebas sampah plastik!',
+      'Pesan sayur segar langsung dari petani lokal Lembang & Bandung. Dikemas higienis dengan besek bambu dan daun pisang. Bebas sampah plastik!',
     images: [
       'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&h=630&q=85',
     ],

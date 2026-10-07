@@ -136,7 +136,7 @@ graph TD
 | :--- | :--- | :--- |
 | **Presentation Layer (UI)** | `src/app/**/page.tsx`, `src/components/**/*.tsx` | Merender antarmuka pengguna responsif dengan Tailwind CSS, menangani interaksi klik, validasi input formulir di sisi browser. |
 | **State Management Layer** | `src/context/CartContext.tsx` | Menyimpan daftar belanjaan, kuantitas, kalkulasi subtotal dan ongkos kirim secara reaktif. |
-| **Application / Business Logic Layer** | `src/app/api/**/*.ts`, `src/lib/whatsapp.ts` | Mengimplementasikan validasi aturan bisnis (validasi wajib isi alamat Tangerang/Serpong, formula ambang batas gratis ongkir Rp 50.000, aturan status pesanan, dan formatting teks WhatsApp). |
+| **Application / Business Logic Layer** | `src/app/api/**/*.ts`, `src/lib/whatsapp.ts` | Mengimplementasikan validasi aturan bisnis (validasi wajib isi alamat Bandung Raya, formula ambang batas gratis ongkir Rp 50.000, aturan status pesanan, dan formatting teks WhatsApp). |
 | **Data Access Layer** | `src/lib/db.ts`, Prisma Client | Menyediakan antarmuka kueri tipe aman (*type-safe queries*) ke tabel-tabel SQLite. |
 | **Persistence Layer** | `prisma/dev.db` (SQLite) | Menyimpan data entitas persisten pengguna, produk, transaksi, dan kritik pelanggan. |
 
@@ -157,7 +157,7 @@ erDiagram
         string id PK "cuid()"
         string name "Nama Pelanggan"
         string whatsapp "Nomor WhatsApp Unik"
-        string address "Alamat Pengiriman (Tangerang/Serpong)"
+        string address "Alamat Pengiriman (Bandung Raya)"
         float latitude "Opsional koordinat"
         float longitude "Opsional koordinat"
         datetime createdAt "Waktu Dibuat"
@@ -226,7 +226,7 @@ Menyimpan profil identitas pelanggan yang pernah melakukan pemesanan.
 | `id` | VARCHAR(30) | No | `cuid()` | Kunci primer identitas pengguna tahan tabrakan. |
 | `name` | VARCHAR(100) | No | - | Nama lengkap penerima pesanan. |
 | `whatsapp` | VARCHAR(20) | No | - | Nomor kontak WhatsApp aktif pemesan (kunci pencarian riwayat). |
-| `address` | TEXT | No | - | Alamat jalan, nomor rumah, perumahan di area Tangerang/Serpong. |
+| `address` | TEXT | No | - | Alamat jalan, nomor rumah, perumahan di area Bandung Raya. |
 | `latitude` | FLOAT | Yes | NULL | Koordinat garis lintang (disiapkan untuk modul rute kurir). |
 | `longitude`| FLOAT | Yes | NULL | Koordinat garis bujur (disiapkan untuk modul rute kurir). |
 | `createdAt`| DATETIME | No | `now()` | Waktu pertama kali tercatat di sistem. |
@@ -343,17 +343,17 @@ graph TD
 ### 4.2 Perancangan Antarmuka Pengguna (UI Wireframe/Layout)
 
 #### 1. Halaman Beranda & Katalog (`/`)
-- **Top Announcement Bar**: Pengumuman batasan operasional ("Pengiriman Area Tangerang & Gading Serpong • Pesan Sebelum Jam 12.00 WIB").
+- **Top Announcement Bar**: Pengumuman batasan operasional ("Pengiriman Area Bandung Raya • Pesan Sebelum Jam 12.00 WIB").
 - **Header**: Logo Sayur Ikat, tautan "Kritik & Saran", dan tombol "Keranjang" dengan penanda jumlah kuantitas (*item badge*).
 - **Hero Section**: Ilustrasi kemasan besek bambu dan daun pisang dengan tombol ajakan bertindak (*Call-to-Action*: "Pilih Paket Sayur" & "Lihat Sayur Satuan").
 - **Product Filter Tabs**: Tab navigasi kategori ("Semua Produk", "Paket Sayur", "Sayur Satuan", "Buah & Bumbu").
-- **Product Card**: Gambar sayuran segar, badge label ("100% Bebas Plastik" / "Panen Subuh"), indikator asal petani lokal ("Kelompok Tani Organik Tangerang"), harga satuan IDR, dan tombol interaktif "+ Keranjang".
+- **Product Card**: Gambar sayuran segar, badge label ("100% Bebas Plastik" / "Panen Subuh"), indikator asal petani lokal ("Kelompok Tani Organik Bandung"), harga satuan IDR, dan tombol interaktif "+ Keranjang".
 
 #### 2. Slide-Over Drawer Keranjang Belanja
 - Terbuka dari sisi kanan layar saat tombol keranjang diklik.
 - Daftar item belanja dilengkapi tombol stepper kuantitas (`-`, `+`) dan hapus item.
 - Kalkulator ongkir transparan: Menampilkan "GRATIS" jika $\ge$ Rp 50.000 atau "Rp 10.000" jika di bawahnya.
-- Formulir Data Pemesan: Input Nama, Nomor WhatsApp, Alamat Lengkap Tangerang/Serpong, dan Catatan Khusus.
+- Formulir Data Pemesan: Input Nama, Nomor WhatsApp, Alamat Lengkap Bandung Raya, dan Catatan Khusus.
 - Pilihan Metode Pembayaran Radio Buttons: COD, QRIS, Transfer BCA, Transfer Mandiri.
 - Tombol Utama: "Lanjut Pesan via WhatsApp" (mengeksekusi simpan order ke server lalu membuka URL WhatsApp).
 
@@ -377,7 +377,7 @@ Menyimpan pesanan baru ke sistem database.
   "customer": {
     "name": "Budi Santoso",
     "whatsapp": "081234567890",
-    "address": "Cluster Alam Sutera Boulevard No. 12, Tangerang",
+    "address": "Jl. Setiabudhi No. 45, Coblong, Kota Bandung",
     "notes": "Tolong jangan dibunyikan bel, gantung di pagar."
   },
   "items": [

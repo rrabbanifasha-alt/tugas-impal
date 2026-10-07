@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="font-serif text-2xl font-bold tracking-tight text-white">Sayur Ikat</span>
             </div>
             <p className="text-xs text-[#A8BBA5] leading-relaxed">
-              Layanan pesan antar sayur segar organik 100% bebas plastik di Gading Serpong dan Tangerang. Panen langsung dari petani lokal.
+              Layanan pesan antar sayur segar organik 100% bebas plastik di Kota Bandung dan Cimahi. Panen langsung dari petani lokal Lembang & Ciwidey.
             </p>
           </div>
 
@@ -25,11 +25,11 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="font-serif text-sm font-bold text-white uppercase tracking-wider">Area Layanan Utama</h4>
             <ul className="text-xs text-[#A8BBA5] space-y-1.5">
-              <li>📍 Gading Serpong</li>
-              <li>📍 Lippo Karawaci</li>
-              <li>📍 BSD City & Serpong</li>
-              <li>📍 Alam Sutera & Tangerang Kota</li>
-              <li>📍 Cisauk & Pagedangan</li>
+              <li>📍 Dago & Coblong</li>
+              <li>📍 Sukajadi & Pasteur</li>
+              <li>📍 Lembang & Bandung Utara</li>
+              <li>📍 Buah Batu & Bandung Selatan</li>
+              <li>📍 Cimahi & Bandung Barat</li>
             </ul>
           </div>
 
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="border-t border-[#2D5A27] pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#82C47C]">
           <p>© 2026 Sayur Ikat Indonesia. Inspirasi Riset Good Eggs, Misfits Market, Riverford, & Kecipir.</p>
-          <p className="mt-2 sm:mt-0">Dibuat dengan ❤️ untuk Kebun & Keluarga Tangerang.</p>
+          <p className="mt-2 sm:mt-0">Dibuat dengan ❤️ untuk Kebun & Keluarga Bandung.</p>
         </div>
       </div>
     </footer>

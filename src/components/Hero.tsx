@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-[#E8F0E5] text-[#2D5A27] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase border border-[#D7E6D3]">
               <span className="w-2 h-2 rounded-full bg-[#2D5A27]"></span>
-              Panen Subuh • Langsung Ditolong Petani Tangerang
+              Panen Subuh • Langsung Dari Petani Lembang & Bandung
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#1C3F29] leading-[1.15] tracking-tight">
@@ -34,7 +34,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg text-[#4A5747] font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Dikemas higienis menggunakan besek bambu tradisional dan alas daun pisang alami. Sayur dipetik langsung dari kebun lokal Tangerang setiap jam 05.00 WIB.
+              Dikemas higienis menggunakan besek bambu tradisional dan alas daun pisang alami. Sayur dipetik langsung dari kebun lokal Bandung setiap jam 05.00 WIB.
             </p>
 
             {/* CTAs */}
@@ -69,7 +69,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="text-xl font-bold font-serif text-[#1C3F29]">Sameday</div>
-                <div className="text-xs text-[#5E6D5B]">Tangerang & Gading Serpong</div>
+                <div className="text-xs text-[#5E6D5B]">Bandung & Cimahi</div>
               </div>
             </div>
           </div>

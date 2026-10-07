@@ -11,7 +11,7 @@
 | :--- | :--- |
 | **Nomor Dokumen** | SKPL-SI-2026-V1.0 |
 | **Nama Proyek** | Sayur Ikat Web Application |
-| **Instansi / Usaha** | Sayur Ikat (Area Tangerang & Gading Serpong) |
+| **Instansi / Usaha** | Sayur Ikat (Area Bandung Raya) |
 | **Tanggal Pembuatan** | 6 Oktober 2026 |
 | **Status Dokumen** | Final / Disetujui |
 | **Standar Acuan** | IEEE Std 830-1998 (*Software Requirements Specifications*) |
@@ -143,11 +143,11 @@ Aplikasi Sayur Ikat dirancang sebagai sistem web responsif terintegrasi. Sistem 
 
 | Kategori Pengguna | Karakteristik & Kebutuhan Pengguna | Hak Akses Sistem |
 | :--- | :--- | :--- |
-| **Pelanggan (Customer)** | Ibu rumah tangga, pekerja profesional, atau konsumen gaya hidup sehat di area Tangerang dan Gading Serpong yang menginginkan sayuran segar tanpa plastik. Memerlukan antarmuka yang simpel, cepat, dan mudah diakses dari ponsel cerdas. | - Akses halaman publik (`/`, `/feedback`).<br>- Menambah produk ke keranjang.<br>- Mengirim pesanan.<br>- Mengirim evaluasi/kritik. |
+| **Pelanggan (Customer)** | Ibu rumah tangga, pekerja profesional, atau konsumen gaya hidup sehat di area Bandung Raya yang menginginkan sayuran segar tanpa plastik. Memerlukan antarmuka yang simpel, cepat, dan mudah diakses dari ponsel cerdas. | - Akses halaman publik (`/`, `/feedback`).<br>- Menambah produk ke keranjang.<br>- Mengirim pesanan.<br>- Mengirim evaluasi/kritik. |
 | **Admin Toko (Operator)** | Staf operasional dapur penyiapan sayur, staf logistik kurir, dan admin layanan pelanggan Sayur Ikat. Memerlukan tabel data yang ringkas, responsif, dan mudah diedit statusnya. | - Akses portal admin (`/admin`, `/admin/orders`, `/admin/products`, `/admin/feedback`).<br>- Mengubah status pesanan.<br>- Menambah/mengedit produk.<br>- Meninjau feedback. |
 
 ### 2.4 Batasan-Batasan Sistem
-1. **Wilayah Pengantaran Terbatas**: Sistem difokuskan untuk pesanan dengan alamat di wilayah Kota Tangerang, Kabupaten Tangerang, Tangerang Selatan, dan kawasan Gading Serpong.
+1. **Wilayah Pengantaran Terbatas**: Sistem difokuskan untuk pesanan dengan alamat di wilayah Kota Bandung, Kota Cimahi, dan kawasan Bandung Raya.
 2. **Ambang Batas Jadwal Masak (*Cut-Off Time*)**: Pemesanan sebelum pukul 12.00 WIB dikirim pada hari yang sama (*same-day delivery*); pesanan setelah jam tersebut berpotensi dikirim keesokan paginya.
 3. **Kebijakan Biaya Kirim**: Biaya kirim flat sebesar Rp 10.000 untuk total belanja sayur di bawah Rp 50.000. Belanja $\ge$ Rp 50.000 mendapatkan fasilitas Bebas Ongkir (Rp 0).
 4. **Batasan Ukuran File Foto**: Bukti foto kerusakan sayur pada form feedback dibatasi maksimal sebesar 5 MB.
@@ -216,7 +216,7 @@ Aplikasi Sayur Ikat dirancang sebagai sistem web responsif terintegrasi. Sistem 
 | **SKPL-F-03** | Interaksi Keranjang Belanja | Sistem harus memungkinkan penambahan item ke keranjang, penambahan/pengurangan kuantitas dengan tombol stepper (`-` / `+`), dan penghapusan item. | **Tinggi (Must Have)** |
 | **SKPL-F-04** | Penyimpanan Keranjang Lokal | Sistem harus menyimpan daftar keranjang secara lokal di *LocalStorage* browser agar isi belanjaan tidak terhapus saat halaman direfresh atau browser ditutup sementara. | **Sedang (Should Have)** |
 | **SKPL-F-05** | Kalkulasi Otomatis Biaya & Ongkir | Sistem harus menghitung subtotal belanjaan secara otomatis dan menentukan tarif ongkir: Gratis (Rp 0) jika belanjaan $\ge$ Rp 50.000; atau Rp 10.000 jika $<$ Rp 50.000. | **Tinggi (Must Have)** |
-| **SKPL-F-06** | Formulir Pengiriman & Pembayaran | Sistem harus memvalidasi data pembeli di dalam drawer keranjang belanja: Nama Lengkap (wajib), Nomor WhatsApp (wajib), Alamat Pengiriman Tangerang/Serpong (wajib), Catatan Khusus (opsional), dan Metode Pembayaran (COD / QRIS / Transfer BCA / Transfer Mandiri). | **Tinggi (Must Have)** |
+| **SKPL-F-06** | Formulir Pengiriman & Pembayaran | Sistem harus memvalidasi data pembeli di dalam drawer keranjang belanja: Nama Lengkap (wajib), Nomor WhatsApp (wajib), Alamat Pengiriman Bandung Raya (wajib), Catatan Khusus (opsional), dan Metode Pembayaran (COD / QRIS / Transfer BCA / Transfer Mandiri). | **Tinggi (Must Have)** |
 | **SKPL-F-07** | Pencatatan Pesanan ke Server | Sistem harus menyimpan transaksi baru yang terverifikasi ke tabel `orders` dan `order_items` di basis data server dengan status awal `PENDING`. | **Tinggi (Must Have)** |
 | **SKPL-F-08** | Pembuatan Invoice Teks WhatsApp | Sistem harus mengonversi rincian pesanan yang berhasil disimpan menjadi format pesan WhatsApp terstruktur dan membuka aplikasi WhatsApp ke nomor admin resmi Sayur Ikat. | **Tinggi (Must Have)** |
 | **SKPL-F-09** | Formulir Evaluasi Kualitas Mutu | Sistem harus menyediakan halaman khusus (`/feedback`) berisi evaluasi 4 dimensi: Kesegaran Sayur (Layu/Biasa/Segar), Bungkusan Daun (Robek/Berantakan/Rapi), Ketepatan Kurir (Terlambat/Tepat), dan Pengalaman Pesan (Ribet/Gampang). | **Tinggi (Must Have)** |
