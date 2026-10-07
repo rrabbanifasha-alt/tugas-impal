@@ -31,7 +31,7 @@ Kebutuhan antarmuka perangkat lunak mendefinisikan seluruh perangkat lunak ekste
 * Peramban web klien berinteraksi dengan aplikasi melalui standar W3C HTML5 dan ECMAScript modern.
 * **HTML5 LocalStorage API:** Digunakan pada sisi klien untuk dua fungsi persistensi data:
   1. Kunci `sayurikat_cart` pada `src/context/CartContext.tsx` untuk mempertahankan daftar belanja di keranjang saat halaman ditutup atau dimuat ulang.
-  2. Kunci `sayurikat_customer_data` pada `src/components/CartDrawer.tsx` untuk mengingat data identitas pelanggan (nama, nomor telepon, alamat, dan catatan) agar pelanggan tidak perlu mengisi ulang formulir saat berbelanja kembali.
+  2. Kunci `sayurikat_customer_data` pada `src/components/CartDrawer.tsx` untuk mengingat data identitas pelanggan (nama, nomor WhatsApp, dan alamat pengiriman) jika pelanggan mencentang opsi simpan data (*remember me*), agar tidak perlu mengisi ulang formulir saat berbelanja kembali (data akan otomatis dihapus dari *LocalStorage* jika opsi centang dimatikan).
 * **HTML5 FileReader API:** Digunakan pada modul evaluasi mutu (`src/app/feedback/page.tsx`) untuk membaca berkas gambar bukti fisik yang dipilih pengguna dan mengonversinya menjadi teks *Base64 Data URL* secara instan di peramban.
 
 #### 3. Antarmuka Sistem Manajemen Basis Data (Database Interface via Prisma ORM)
