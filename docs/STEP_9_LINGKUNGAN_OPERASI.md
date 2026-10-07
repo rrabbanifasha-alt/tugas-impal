@@ -17,9 +17,9 @@ Sistem aplikasi web **Sayur Ikat** dirancang untuk beroperasi secara *online* me
 * **Sistem Operasi Server**:
   * Sistem operasi berbasis Linux (misalnya Ubuntu Server 20.04/22.04 LTS, Debian, Alpine Linux) atau Windows Server yang mendukung eksekusi lingkungan Node.js.
 * **Runtime Mesin**:
-  * Node.js versi 18.x LTS atau versi 20.x ke atas.
+  * Node.js versi 20.9 atau lebih baru (LTS).
 * **Framework Web Aplikasi**:
-  * Next.js 16 (App Router) berbasis React 19 dan TypeScript, yang menangani *Server-Side Rendering* (SSR), *React Server Components* (RSC), serta penyediaan *Route Handlers* (REST API).
+  * Next.js 16 (App Router) berbasis React 19 dan TypeScript, untuk rendering antarmuka halaman web dan menjalankan Route Handlers (REST API).
 
 ### 3. Lingkungan Basis Data (*Database Environment*)
 * **Database Engine**:
